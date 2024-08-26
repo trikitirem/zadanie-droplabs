@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { ProductsPage } from "../pages";
+import { ProductsPage, ProductDetailsPage } from "../pages";
 
 export enum Routes {
   HOME = "/",
@@ -18,6 +18,6 @@ export const router = createBrowserRouter([
   },
   {
     path: Routes.PRODUCT_DETAILS,
-    element: <>Product details</>,
+    element: <ProductDetailsPage />,
   },
 ]);

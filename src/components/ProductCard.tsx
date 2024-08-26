@@ -1,8 +1,9 @@
 import React from "react";
-import { ProductBase } from "../../types";
+import { ProductBase } from "../types";
 import { Link, generatePath } from "react-router-dom";
-import { Routes } from "../../router";
-import "./styles.css";
+import { Routes } from "../router";
+import "../pages/products/styles.css";
+import { PriceCard } from "./index.ts";
 
 type ProductCardProps = {
   product: ProductBase;
@@ -18,7 +19,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
     >
       <img src={image} alt={title} />
       <h1>{title}</h1>
-      <span>{price}</span>
+      <PriceCard price={price} />
     </Link>
   );
 };

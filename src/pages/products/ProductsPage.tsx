@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import type { ProductBase } from "../../types";
-import { ProductCard } from "./ProductCard.tsx";
 import "./styles.css";
+import { ProductCard } from "../../components";
 
 const fetchProducts = async () => {
   const response = await fetch("https://fakestoreapi.com/products");
@@ -19,7 +19,6 @@ export const ProductsPage = () => {
   });
 
   if (isLoading) return <div>isLoading</div>;
-
   if (isError) return <div>Error!</div>;
 
   return (
