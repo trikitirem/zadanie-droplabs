@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import { ProductsPage } from "../pages";
 
 export enum Routes {
   HOME = "/",
@@ -13,7 +14,7 @@ export const router = createBrowserRouter([
   },
   {
     path: Routes.PRODUCTS,
-    element: <>Products</>,
+    element: <ProductsPage />,
   },
   {
     path: Routes.PRODUCT_DETAILS,
