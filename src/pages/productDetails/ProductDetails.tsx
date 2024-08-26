@@ -8,23 +8,19 @@ export const ProductDetailsPage = () => {
     useLoaderData() as Product;
 
   return (
-    <div>
+    <section className="product-details-container">
       <h1>{title}</h1>
-      <section>
-        <figure>
-          <img src={image} alt={title} />
-        </figure>
-        <main>
-          <header>
-            <PriceCard price={price} />
-            <RatingCard rating={rating} />
-          </header>
-          <article>
-            <p>Description:</p>
-            {description}
-          </article>
-        </main>
-      </section>
-    </div>
+      <figure>
+        <img src={image} alt={title} />
+      </figure>
+      <article>
+        <PriceCard price={price} />
+        <RatingCard rating={rating} />
+        <p>
+          <span>Description: </span>
+          {description}
+        </p>
+      </article>
+    </section>
   );
 };

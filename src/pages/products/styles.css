@@ -4,18 +4,3 @@ ul.products {
     gap: 1rem;
     list-style-type: none;
 }
-
-.product-card {
-    text-decoration: none;
-    color: black;
-}
-
-.product-card:hover {
-    text-decoration: underline;
-}
-
-.product-card > img {
-    height: 200px;
-    width: 200px;
-    object-fit: contain;
-}

@@ -1,26 +1,32 @@
-ul{
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
 nav {
     background: #3066BE;
 }
 
-main, ul {
+main, .nav-links {
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
-li > a {
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+.nav-links > li > a {
     display: inline-block;
     padding: 1rem .75rem;
     color: white;
 }
 
-li > a:hover {
-    background:#090C9B;
+.nav-links > li > a:hover {
+    background: #0F084B;
+}
+
+main {
+    margin-top: 2rem;
+}
+
+.active-link {
+    background: #0F084B;
 }

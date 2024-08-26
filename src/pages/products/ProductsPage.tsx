@@ -22,17 +22,15 @@ export const ProductsPage = () => {
   if (isError) return <div>Error!</div>;
 
   return (
-    <main>
-      <section>
-        <h1>Products</h1>
-        <ul className="products">
-          {products?.map((product) => (
-            <li key={product.id}>
-              <ProductCard product={product} />
-            </li>
-          ))}
-        </ul>
-      </section>
-    </main>
+    <section>
+      <h1>Products</h1>
+      <ul className="products">
+        {products?.map((product) => (
+          <li key={product.id}>
+            <ProductCard product={product} />
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 };
