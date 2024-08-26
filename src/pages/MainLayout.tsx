@@ -1,9 +1,11 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigation } from "react-router-dom";
 import { Routes } from "../router";
 import "./styles.css";
 import { CustomNavLink } from "../components";
 
 export const MainLayout = () => {
+  const { state } = useNavigation();
+
   return (
     <>
       <nav>
@@ -16,9 +18,7 @@ export const MainLayout = () => {
           </li>
         </ul>
       </nav>
-      <main>
-        <Outlet />
-      </main>
+      <main>{state === "loading" ? <div>Loading...</div> : <Outlet />}</main>
     </>
   );
 };

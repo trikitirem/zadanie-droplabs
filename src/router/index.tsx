@@ -20,11 +20,15 @@ export const router = createBrowserRouter([
       {
         path: Routes.PRODUCTS,
         element: <ProductsPage />,
+        loader: async () => {
+          const response = await fetch(
+            "https://fakestoreapi.com/products?limit=1000",
+          );
+          return await response.json();
+        },
+        errorElement: <ErrorBoundary />,
       },
       {
-        // W związku z tym że nie trzeba odświeżać danych na stronie z produktem,
-        // używam tutaj nowej funkcji react-router-dom,
-        // która pozwala na wczytanie potrzebnych danych przed wyrenderowaniem komponentu
         path: Routes.PRODUCT_DETAILS,
         element: <ProductDetailsPage />,
         loader: async ({ params: { id } }) => {
