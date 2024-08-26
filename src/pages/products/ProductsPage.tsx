@@ -1,4 +1,7 @@
-import { useQuery, QueryKey } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
+import type { ProductBase } from "../../types";
+import { ProductCard } from "./ProductCard.tsx";
+import "./styles.css";
 
 const fetchProducts = async () => {
   const response = await fetch("https://fakestoreapi.com/products");
@@ -6,14 +9,31 @@ const fetchProducts = async () => {
 };
 
 export const ProductsPage = () => {
-  const { data } = useQuery({
+  const {
+    data: products,
+    isLoading,
+    isError,
+  } = useQuery<ProductBase[]>({
     queryFn: fetchProducts,
     queryKey: ["products"],
   });
 
+  if (isLoading) return <div>isLoading</div>;
+
+  if (isError) return <div>Error!</div>;
+
   return (
-    <>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </>
+    <main>
+      <section>
+        <h1>Products</h1>
+        <ul className="products">
+          {products?.map((product) => (
+            <li key={product.id}>
+              <ProductCard product={product} />
+            </li>
+          ))}
+        </ul>
+      </section>
+    </main>
   );
 };

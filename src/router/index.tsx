@@ -4,7 +4,7 @@ import { ProductsPage } from "../pages";
 export enum Routes {
   HOME = "/",
   PRODUCTS = "/products",
-  PRODUCT_DETAILS = "/products/:productId",
+  PRODUCT_DETAILS = "/products/:id",
 }
 
 export const router = createBrowserRouter([
