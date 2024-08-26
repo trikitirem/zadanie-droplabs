@@ -1,0 +1,26 @@
+ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: #3066BE;
+}
+
+main, ul {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li > a {
+    display: inline-block;
+    padding: 1rem .75rem;
+    color: white;
+}
+
+li > a:hover {
+    background:#090C9B;
+}
