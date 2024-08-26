@@ -1,5 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import { ProductsPage, ProductDetailsPage, MainLayout } from "../pages";
+import {
+  ProductsPage,
+  ProductDetailsPage,
+  MainLayout,
+  HomePage,
+} from "../pages";
 import { ErrorBoundary } from "../components";
 
 export enum Routes {
@@ -15,7 +20,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: Routes.HOME,
-        element: <>Home</>,
+        element: <HomePage />,
       },
       {
         path: Routes.PRODUCTS,

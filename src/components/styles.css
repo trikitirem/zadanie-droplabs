@@ -21,3 +21,17 @@
     margin: 0 auto;
 }
 
+.sorting-controls-button {
+    border: none;
+    background: white;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.25rem 0.5rem;
+}
+
+.sorting-button-active {
+    background: #0F084B !important;
+    color: white;
+}

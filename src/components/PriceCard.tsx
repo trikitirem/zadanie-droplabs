@@ -11,7 +11,8 @@ export const PriceCard: React.FC<PriceCardProps> = ({
 }) => {
   return (
     <span>
-      {price}${currency}
+      {price}
+      {currency}
     </span>
   );
 };

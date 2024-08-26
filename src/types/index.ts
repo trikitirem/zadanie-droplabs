@@ -15,3 +15,9 @@ export type Product = ProductBase & {
   category: string;
   rating: ProductRating;
 };
+
+export enum SortBy {
+  TITLE = "TITLE",
+  PRICE = "PRICE",
+  DEFAULT = "DEFAULT",
+}
