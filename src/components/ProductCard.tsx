@@ -2,8 +2,6 @@ import React from "react";
 import { ProductBase } from "../types";
 import { Link, generatePath } from "react-router-dom";
 import { Routes } from "../router";
-import "./styles.css";
-import { PriceCard } from "./index.ts";
 
 type ProductCardProps = {
   product: ProductBase;
@@ -14,13 +12,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   return (
     <Link to={generatePath(Routes.PRODUCT_DETAILS, { id: id.toString() })}>
-      <div className="product-card">
-        <figure>
-          <img src={image} alt={title} />
+      <div className="h-full text-black p-4 rounded-md border hover:shadow-lg hover:underline">
+        <figure className="h-[268px] w-full">
+          <img
+            src={image}
+            alt={title}
+            className="w-[268px] object-contain mx-auto"
+          />
         </figure>
-        <footer>
+        <footer className="mt-4">
           <h1>{title}</h1>
-          <PriceCard price={price} />
+          <p>{price}zł</p>
         </footer>
       </div>
     </Link>

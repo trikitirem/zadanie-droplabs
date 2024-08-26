@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ProductBase, SortBy } from "../../types";
-import "./styles.css";
 import { ProductCard, SortingControls } from "../../components";
 import { useLoaderData } from "react-router-dom";
 
@@ -28,14 +27,14 @@ export const ProductsPage = () => {
 
   return (
     <section>
-      <header>
-        <h1>Products</h1>
+      <header className="mb-8">
+        <h1 className="text-3xl">Products</h1>
         <SortingControls
           sortBy={sortBy}
           setSortBy={(sortBy) => setSortBy(sortBy)}
         />
       </header>
-      <ul className="products">
+      <ul className="grid grid-cols-3 gap-4">
         {products.map((product) => (
           <li key={product.id}>
             <ProductCard product={product} />

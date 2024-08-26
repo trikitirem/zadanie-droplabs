@@ -1,6 +1,5 @@
 import { Outlet, useNavigation } from "react-router-dom";
 import { Routes } from "../router";
-import "./styles.css";
 import { CustomNavLink } from "../components";
 
 export const MainLayout = () => {
@@ -8,8 +7,8 @@ export const MainLayout = () => {
 
   return (
     <>
-      <nav>
-        <ul className="nav-links">
+      <nav className="bg-blue-700">
+        <ul className="flex">
           <li>
             <CustomNavLink route={Routes.HOME} text="Home" />
           </li>

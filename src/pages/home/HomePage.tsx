@@ -17,10 +17,13 @@ export const HomePage = () => {
           to={generatePath(Routes.PRODUCT_DETAILS, {
             id: latestVisited.toString(),
           })}
+          className="underline text-xl"
         >
           Wróć do przeglądania produktu
         </Link>
       )}
+
+      <h1 className="text-5xl mt-12">Home Page</h1>
     </>
   );
 };

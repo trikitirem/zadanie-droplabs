@@ -19,7 +19,7 @@ const SortingControlsButton: React.FC<SortingControlsButtonProps> = ({
 }) => {
   return (
     <button
-      className={`sorting-controls-button ${isActive && "sorting-button-active"}`}
+      className={`border-none px-2 py-1 rounded ${isActive && "bg-blue-900 text-white"}`}
       onClick={onClick}
     >
       {label.toLocaleLowerCase()}
@@ -32,18 +32,16 @@ export const SortingControls: React.FC<SortingControlsProps> = ({
   setSortBy,
 }) => {
   return (
-    <div className="sorting-controls">
-      <div>
-        <span>Sort by: </span>
-        {Object.values(SortBy).map((label) => (
-          <SortingControlsButton
-            key={label}
-            label={label}
-            onClick={() => setSortBy(label)}
-            isActive={sortBy === label}
-          />
-        ))}
-      </div>
+    <div>
+      <span>Sort by: </span>
+      {Object.values(SortBy).map((label) => (
+        <SortingControlsButton
+          key={label}
+          label={label}
+          onClick={() => setSortBy(label)}
+          isActive={sortBy === label}
+        />
+      ))}
     </div>
   );
 };

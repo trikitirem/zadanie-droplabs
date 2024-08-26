@@ -13,7 +13,9 @@ export const CustomNavLink: React.FC<CustomNavLinkProps> = ({
 }) => (
   <NavLink
     to={route}
-    className={({ isActive }) => (isActive ? "active-link" : undefined)}
+    className={({ isActive }) =>
+      `inline-block text-white px-4 py-2 hover:bg-blue-800 ${isActive && "bg-blue-800"}`
+    }
   >
     {text}
   </NavLink>

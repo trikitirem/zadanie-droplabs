@@ -26,9 +26,7 @@ export const router = createBrowserRouter([
         path: Routes.PRODUCTS,
         element: <ProductsPage />,
         loader: async () => {
-          const response = await fetch(
-            "https://fakestoreapi.com/products?limit=1000",
-          );
+          const response = await fetch("https://fakestoreapi.com/products");
           return await response.json();
         },
         errorElement: <ErrorBoundary />,

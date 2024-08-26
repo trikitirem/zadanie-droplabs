@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -10,31 +14,21 @@
 }
 
 body {
-  margin: 0;
+  @apply m-0;
 }
 
 a {
-  text-decoration: none;
+  @apply no-underline;
 }
 
 figure {
-  margin: 0;
-  max-height: 400px;
-  max-width: 500px;
-  display: flex;
-  justify-content: center;
+  @apply m-0 flex justify-center;
 }
 
-figure > img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+main, nav > ul {
+  @apply max-w-[1200px] mx-auto;
 }
 
-.product-card > footer {
-  padding: 1rem;
-}
-
-.product-card > footer > h1 {
-  font-size: 1rem;
+main {
+  @apply my-8;
 }
