@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ProductBase, SortBy } from "../../types";
-import { ProductCard, SortingControls } from "../../components";
+import { ProductBase, SortBy } from "../types";
+import { ProductCard, SortingControls } from "../components";
 import { useLoaderData } from "react-router-dom";
 
 // NOTE: w związku z tym że nie muszę odpytywać api kilka razy o dane (sortowanie musi być zrobione lokalnie),

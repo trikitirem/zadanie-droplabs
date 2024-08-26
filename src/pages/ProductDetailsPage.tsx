@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
-import { Product } from "../../types";
-import { LocalStorageKey, useLocalStorage } from "../../hooks";
+import { Product } from "../types";
+import { LocalStorageKey, useLocalStorage } from "../hooks";
 
 export const ProductDetailsPage = () => {
   const {

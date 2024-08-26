@@ -32,16 +32,19 @@ export const SortingControls: React.FC<SortingControlsProps> = ({
   setSortBy,
 }) => {
   return (
-    <div>
+    <div className="flex items-center gap-2 mt-2">
       <span>Sort by: </span>
-      {Object.values(SortBy).map((label) => (
-        <SortingControlsButton
-          key={label}
-          label={label}
-          onClick={() => setSortBy(label)}
-          isActive={sortBy === label}
-        />
-      ))}
+      <ul className="flex">
+        {Object.values(SortBy).map((label) => (
+          <li key={label}>
+            <SortingControlsButton
+              label={label}
+              onClick={() => setSortBy(label)}
+              isActive={sortBy === label}
+            />
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

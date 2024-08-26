@@ -1,6 +1,6 @@
-import { LocalStorageKey, useLocalStorage } from "../../hooks";
+import { LocalStorageKey, useLocalStorage } from "../hooks";
 import { generatePath, Link } from "react-router-dom";
-import { Routes } from "../../router";
+import { Routes } from "../router";
 
 export const HomePage = () => {
   // NOTE: Jak widać do przechowywania ostatniego odwiedzonego produktu używam LocalStorage.

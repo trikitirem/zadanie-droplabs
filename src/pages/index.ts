@@ -1,4 +1,4 @@
-export * from "./products";
-export * from "./productDetails";
+export * from "./ProductsPage";
+export * from "./HomePage";
 export * from "./MainLayout";
-export * from "./home";
+export * from "./ProductDetailsPage.tsx";
